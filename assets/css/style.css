@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap');
+
+:root {
+  --primary: #176b87;
+  --secondary: #e8f4f7;
+  --accent: #e9b949;
+  --dark: #17324d;
+  --text: #333;
+  --white: #fff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Cairo', sans-serif;
+  direction: rtl;
+  background: #f5f8fa;
+  color: var(--text);
+  line-height: 1.8;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+header {
+  background: var(--white);
+  border-bottom: 3px solid var(--accent);
+  padding: 20px 0;
+}
+
+header h1 {
+  color: var(--primary);
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+header p {
+  color: var(--dark);
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+nav a {
+  color: var(--dark);
+  font-weight: 700;
+  padding: 8px 14px;
+  border-radius: 8px;
+}
+
+nav a:hover {
+  background: var(--secondary);
+}
+
+.hero {
+  background: linear-gradient(135deg, #176b87, #2a9d8f);
+  color: white;
+  padding: 55px 20px;
+  text-align: center;
+  border-radius: 15px;
+  margin: 25px auto;
+}
+
+.hero h2 {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 1.1rem;
+}
+
+.section {
+  padding: 35px 0;
+}
+
+.section-title {
+  color: var(--primary);
+  font-size: 1.7rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  border-right: 5px solid var(--accent);
+  padding-right: 12px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: var(--white);
+  border-radius: 14px;
+  padding: 22px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h3 {
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+button,
+.btn {
+  display: inline-block;
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 8px;
+  font-family: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button:hover,
+.btn:hover {
+  background: var(--dark);
+}
+
+footer {
+  background: var(--dark);
+  color: white;
+  text-align: center;
+  padding: 25px;
+  margin-top: 40px;
+}
+
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero h2 {
+    font-size: 1.6rem;
+  }
+
+  nav {
+    gap: 8px;
+  }
+
+  .container {
+    width: 94%;
+  }
+}
